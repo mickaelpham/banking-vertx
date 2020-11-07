@@ -2,6 +2,7 @@ plugins {
     application
     idea
     id("com.diffplug.spotless")
+    id("io.swagger.core.v3.swagger-gradle-plugin") version "2.1.5"
 }
 
 
@@ -28,4 +29,10 @@ spotless {
     java {
         googleJavaFormat()
     }
+}
+
+tasks.resolve {
+    outputDir = file("docs")
+    outputFormat = io.swagger.v3.plugins.gradle.tasks.ResolveTask.Format.YAML
+    classpath = sourceSets.main.get().runtimeClasspath
 }
