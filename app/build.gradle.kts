@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation("io.vertx:vertx-core:3.9.4")
+    implementation("org.jboss.resteasy:resteasy-vertx:4.5.8.Final")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
