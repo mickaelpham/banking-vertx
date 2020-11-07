@@ -6,3 +6,7 @@ build
 
 # Do not ignore the gradle wrapper
 !gradle-wrapper.jar
+
+# Ignore IntelliJ IDEA files
+*.iml
+.idea/
